@@ -2,6 +2,47 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+<!-- ГОЛОСОВОЕ SEO И МИКРОРАЗМЕТКА ДЛЯ РОБОТОВ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Кровля Тандем: Инженерный расчет и монтаж крыш",
+  "description": "Провести смету и заказать ремонт крыши частного дома в Ростове-на-Дону, Краснодаре, ДНР и ЛНР. Честная цена за м2.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Кровля Тандем",
+    "image": "https://cena-zakaz-kryshi-rostov.montazh-krysha.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ростов-на-Дону, Краснодар, Таганрог, Аксай, Батайск, Гуково, Донецк, Луганск, Мариуполь",
+      "addressRegion": "Ростовская область, Краснодарский край, ДНР, ЛНР"
+    }
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Ростов-на-Дону"},
+    {"@type": "City", "name": "Краснодар"},
+    {"@type": "City", "name": "Таганрог"},
+    {"@type": "City", "name": "Мариуполь"},
+    {"@type": "City", "name": "Донецк"}
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Кровельные работы",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Монтаж металлочерепицы" }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Перекрытие крыши профнастилом" }
+      }
+    ]
+  }
+}
+</script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Кровля Тандем | Честная смета за 2 минуты: Ростов, Краснодар, ДНР, ЛНР</title>
     <meta name="description" content="Заказать расчет кровли под ключ в Ростове, Краснодаре, ДНР. Металлочерепица Grand Line по ценам производителя. Умный конфигуратор Кровля Тандем.">
@@ -71,38 +112,39 @@
         .check-item.active { border-color: var(--orange); background: #fff7ed; }
 
         /* FOOTER & UI BUTTONS */
-               /* УЛЬТРА-КОМПАКТНЫЙ МОБИЛЬНЫЙ ФУТЕР */
         .sticky-footer { 
             position: fixed; bottom: 0; left: 0; width: 100%; 
-            background: rgba(255, 255, 255, 0.95); border-top: 1px solid #e2e8f0; 
-            padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; 
-            z-index: 2000; backdrop-filter: blur(10px); height: 65px;
+            background: rgba(255, 255, 255, 0.98); border-top: 1px solid #e2e8f0; 
+            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
+            z-index: 1000; box-shadow: 0 -10px 30px rgba(0,0,0,0.08); backdrop-filter: blur(15px);
         }
-        .total-box { line-height: 1; min-width: 100px; }
-        .total-box span { display: block; font-size: 0.55rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 2px; font-weight: 800; }
-        .total-box b { font-size: 1.1rem; color: var(--anthracite); letter-spacing: -0.5px; }
-        .total-box b i { color: var(--orange); font-style: normal; font-size: 0.8rem; }
+        .total-box { line-height: 1.1; }
+        .total-box span { display: block; font-size: 0.65rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 5px; font-weight: 800; letter-spacing: 0.5px; }
+        .total-box b { font-size: 1.8rem; color: var(--anthracite); letter-spacing: -1px; }
+        .total-box b i { color: var(--orange); font-style: normal; }
 
-        .btn-group { display: flex; gap: 5px; flex: 1; justify-content: flex-end; }
+        .btn-group { display: grid; grid-template-columns: repeat(3, auto); gap: 8px; }
         .btn { 
-            padding: 8px 10px; border-radius: 6px; text-decoration: none; 
-            font-weight: 800; font-size: 0.55rem; text-transform: uppercase; 
-            transition: 0.2s; display: flex; align-items: center; justify-content: center;
-            text-align: center; border: none; height: 38px;
+            padding: 12px 18px; border-radius: 10px; text-decoration: none; 
+            font-weight: 800; font-size: 0.65rem; text-transform: uppercase; 
+            transition: 0.3s; display: flex; align-items: center; justify-content: center;
+            text-align: center; border: none; cursor: pointer;
         }
-        .btn-tg { background: var(--tg-blue); color: white; flex: 1; }
-        .btn-max { background: var(--max-blue); color: white; flex: 1; }
-        .btn-call { background: var(--anthracite); color: white; width: 40px; } /* Кнопка-трубка */
+        .btn-tg { background: var(--tg-blue); color: white; }
+        .btn-max { background: var(--max-blue); color: white; }
+        .btn-call { background: var(--anthracite); color: white; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .seo-disclaimer { font-size: 0.7rem; color: #94a3b8; text-align: center; padding: 20px 10% 160px; line-height: 1.5; }
 
         @media (max-width: 768px) {
-            .sticky-footer { height: 60px; padding: 5px 10px; }
-            .total-box b { font-size: 1rem; }
-            .btn { font-size: 0.5rem; padding: 6px; }
-            /* Скрываем текст на кнопке звонка для экономии места на мобилках */
-            .btn-call::before { content: '📞'; font-size: 1rem; }
-            .btn-call span { display: none; }
+            h1 { font-size: 1.6rem; }
+            .material-grid { grid-template-columns: 1fr; }
+            .check-group { grid-template-columns: 1fr; }
+            .sticky-footer { flex-direction: column; gap: 15px; text-align: center; padding-bottom: 30px; }
+            .btn-group { grid-template-columns: 1fr; width: 100%; gap: 8px; }
+            .btn { font-size: 0.8rem; padding: 16px; }
         }
-
     </style>
 </head>
 <body>
@@ -323,17 +365,19 @@
 </footer>
 
 <div class="sticky-footer">
+    <!-- Кнопки связи (TG, Max, Позвонить) остаются здесь -->
+
     <div class="total-box">
-        <span>Итог:</span>
+        <span>Ориентировочный итог:</span>
         <b id="total-price">~ 0 <i>₽</i></b>
     </div>
     <div class="btn-group">
-        <a href="https://t.me" class="btn btn-tg">Работы TG</a>
-        <a href="https://messenger-max.com" class="btn btn-max">Max</a>
-        <a href="tel:+70000000000" class="btn btn-call"><span>Позвонить</span></a>
+        <a href="https://t.me/rostovstroy61" class="btn btn-tg" target="_blank">Примеры работ TG</a>
+        <!-- Messenger Max link FIXED -->
+        <a href="https://max.ru/u/f9LHodD0cOJTswzOCZOyxR79we7NWrQpy-q1p0sDV5UynjbfHf71br4E6ck" class="btn btn-max" target="_blank">Messenger Max</a>
+        <a href="tel:+79110743258" class="btn btn-call">Позвонить</a>
     </div>
 </div>
-
 
 <script>
     let currentMatPrice = 430;
@@ -428,5 +472,3 @@
 
 </body>
 </html>
-
-
