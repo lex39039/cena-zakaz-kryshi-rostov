@@ -71,39 +71,38 @@
         .check-item.active { border-color: var(--orange); background: #fff7ed; }
 
         /* FOOTER & UI BUTTONS */
+               /* УЛЬТРА-КОМПАКТНЫЙ МОБИЛЬНЫЙ ФУТЕР */
         .sticky-footer { 
             position: fixed; bottom: 0; left: 0; width: 100%; 
-            background: rgba(255, 255, 255, 0.98); border-top: 1px solid #e2e8f0; 
-            padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; 
-            z-index: 1000; box-shadow: 0 -10px 30px rgba(0,0,0,0.08); backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.95); border-top: 1px solid #e2e8f0; 
+            padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; 
+            z-index: 2000; backdrop-filter: blur(10px); height: 65px;
         }
-        .total-box { line-height: 1.1; }
-        .total-box span { display: block; font-size: 0.65rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 5px; font-weight: 800; letter-spacing: 0.5px; }
-        .total-box b { font-size: 1.8rem; color: var(--anthracite); letter-spacing: -1px; }
-        .total-box b i { color: var(--orange); font-style: normal; }
+        .total-box { line-height: 1; min-width: 100px; }
+        .total-box span { display: block; font-size: 0.55rem; text-transform: uppercase; color: #94a3b8; margin-bottom: 2px; font-weight: 800; }
+        .total-box b { font-size: 1.1rem; color: var(--anthracite); letter-spacing: -0.5px; }
+        .total-box b i { color: var(--orange); font-style: normal; font-size: 0.8rem; }
 
-        .btn-group { display: grid; grid-template-columns: repeat(3, auto); gap: 8px; }
+        .btn-group { display: flex; gap: 5px; flex: 1; justify-content: flex-end; }
         .btn { 
-            padding: 12px 18px; border-radius: 10px; text-decoration: none; 
-            font-weight: 800; font-size: 0.65rem; text-transform: uppercase; 
-            transition: 0.3s; display: flex; align-items: center; justify-content: center;
-            text-align: center; border: none; cursor: pointer;
+            padding: 8px 10px; border-radius: 6px; text-decoration: none; 
+            font-weight: 800; font-size: 0.55rem; text-transform: uppercase; 
+            transition: 0.2s; display: flex; align-items: center; justify-content: center;
+            text-align: center; border: none; height: 38px;
         }
-        .btn-tg { background: var(--tg-blue); color: white; }
-        .btn-max { background: var(--max-blue); color: white; }
-        .btn-call { background: var(--anthracite); color: white; }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        .seo-disclaimer { font-size: 0.7rem; color: #94a3b8; text-align: center; padding: 20px 10% 160px; line-height: 1.5; }
+        .btn-tg { background: var(--tg-blue); color: white; flex: 1; }
+        .btn-max { background: var(--max-blue); color: white; flex: 1; }
+        .btn-call { background: var(--anthracite); color: white; width: 40px; } /* Кнопка-трубка */
 
         @media (max-width: 768px) {
-            h1 { font-size: 1.6rem; }
-            .material-grid { grid-template-columns: 1fr; }
-            .check-group { grid-template-columns: 1fr; }
-            .sticky-footer { flex-direction: column; gap: 15px; text-align: center; padding-bottom: 30px; }
-            .btn-group { grid-template-columns: 1fr; width: 100%; gap: 8px; }
-            .btn { font-size: 0.8rem; padding: 16px; }
+            .sticky-footer { height: 60px; padding: 5px 10px; }
+            .total-box b { font-size: 1rem; }
+            .btn { font-size: 0.5rem; padding: 6px; }
+            /* Скрываем текст на кнопке звонка для экономии места на мобилках */
+            .btn-call::before { content: '📞'; font-size: 1rem; }
+            .btn-call span { display: none; }
         }
+
     </style>
 </head>
 <body>
@@ -429,4 +428,5 @@
 
 </body>
 </html>
+
 
